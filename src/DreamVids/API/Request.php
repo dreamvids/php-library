@@ -2,7 +2,7 @@
 namespace DreamVids\API;
 
 class Request {
-	const API_URL = 'http://dev.box:8080/shared/DreamVids/API/';
+	const API_URL = 'http://192.168.56.1:8080/shared/DreamVids/API/';
 
 	private $curl;
 	private $rawResponse;
@@ -57,7 +57,7 @@ class Request {
 
 	public function getResponseCode() {
 		if (isset($this->response->code))
-			return $this->respone->code;
+			return $this->response->code;
 	}
 
 	public function getResponseData() {
@@ -67,6 +67,6 @@ class Request {
 
 	public function getResponseErrors() {
 		if(isset($this->response->errors))
-			return $this->reponse->errors;
+			return $this->response->errors;
 	}
 }
