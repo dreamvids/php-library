@@ -1,0 +1,19 @@
+{
+    "name": "dreamvids/php-library",
+    "description": "PHP Library for the new DreamVids API",
+    "authors": [
+        {
+            "name": "DreamVids",
+            "email": "dev@reamvids.fr"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.4.0"
+    },
+    "autoload": {
+        "psr-0": {
+            "DreamVids": "src/"
+        }
+    }
+}
