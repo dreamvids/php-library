@@ -14,15 +14,15 @@ class Request {
 		$this->rawResponse = '';
 		$this->response = [];
 		$dataToHash = json_encode([
-			Client::NAME,
-			Client::DOMAIN,
+			Client::$NAME,
+			Client::$DOMAIN,
 			$uri,
 			$method,
 			$data
 		]);
 		$this->headers = [
-			'X-Public: ' . Client::PUBLIC_KEY,
-			'X-Hash: ' . hash_hmac('sha512', $dataToHash, Client::PRIVATE_KEY)
+			'X-Public: ' . Client::$PUBLIC_KEY,
+			'X-Hash: ' . hash_hmac('sha512', $dataToHash, Client::$PRIVATE_KEY)
 		];
 		if ($sessid != null)
 			$this->headers[] = 'X-Session-ID: ' . $sessid;
